@@ -1,0 +1,8 @@
+{
+  "plugins": [
+    "react-hot-loader/babel",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-proposal-class-properties"
+  ],
+  "presets": ["@babel/preset-react", "@babel/preset-env"]
+}

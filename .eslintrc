@@ -1,0 +1,28 @@
+{
+  "extends": ["eslint:recommended"],
+  "parser": "babel-eslint",
+  "env": {
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "plugins": ["prettier", "react"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "rules": {
+    "linebreak-style": ["error", "unix"],
+    "no-eval": ["error"],
+    "eqeqeq": ["error"],
+    "no-unused-expressions": 1,
+    "no-useless-constructor": 1,
+    "no-debugger": 1,
+    "no-unused-vars": 1,
+    "react/jsx-uses-react": 1,
+    "react/jsx-uses-vars": 1
+  }
+}

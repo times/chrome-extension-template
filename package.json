@@ -1,0 +1,74 @@
+{
+  "name": "chrome-extension-template",
+  "keywords": [
+    "chrome",
+    "extension"
+  ],
+  "author": "Chris Hutchinson <chris.hutchinson@thetimes.co.uk>",
+  "version": "1.0.0",
+  "description": "A template for a basic popup-based Chrome extension",
+  "main": "./src/popup.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack --config webpack.config.js --watch",
+    "build": "rimraf build && cross-env NODE_ENV=production webpack -p",
+    "test": "jest --coverage",
+    "lint": "eslint ./src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.3.0",
+    "babel-loader": "^8.0.5",
+    "copy-webpack-plugin": "^4.5.1",
+    "cross-env": "^5.1.4",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.0.0",
+    "jest-environment-jsdom": "^22.4.3",
+    "jest-environment-jsdom-global": "^1.0.3",
+    "jest-styled-components": "^6.3.1",
+    "prettier": "^1.16.4",
+    "react-hot-loader": "^4.1.2",
+    "react-scripts": "^1.1.4",
+    "react-testing-library": "^7.0.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^4.8.1",
+    "webpack-chrome-extension-reloader": "^0.6.7",
+    "webpack-cli": "^2.1.2",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "styled-components": "^4.2.0"
+  },
+  "jest": {
+    "globals": {
+      "window": true
+    },
+    "transformIgnorePatterns": [],
+    "testMatch": [
+      "<rootDir>/**/__tests__/**/*.test.js"
+    ],
+    "setupFilesAfterEnv": [
+      "./setupJestFramework.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(png|jpg)$": "identity-obj-proxy",
+      "\\.(css|styl|less|sass|scss)$": "identity-obj-proxy"
+    }
+  }
+}
